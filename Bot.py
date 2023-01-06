@@ -5,11 +5,9 @@ import config
 
 bot = telebot.TeleBot(config.TOKEN)
 
-
 @bot.message_handler(commands=['start'])
 def start_handlers(message):
-    bot.send_message(message.chat.id, "Привет, в котором хочеш узнать погоду 😉?")
-
+    bot.send_message(message.chat.id, "Привет, в котором городе хочешь узнать погоду 😉?")
 
 @bot.message_handler(content_types=['text'])
 def msg_handler(message):
